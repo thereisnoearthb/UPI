@@ -30,19 +30,24 @@
       <br>
       <p id="output"></p>
 
-      <script>
 
-      //Get Handle
-      var str = window.location.href;
-      var pos = str.indexOf("com/");
-      var InstaHandle = str.slice(pos+4);
-      var str = window.location.href;
-      var InstaName = str.slice('&'+1);
-      document.getElementById("output").innerHTML = InstaHandle + " " + InstaName;
+      <script language="JavaScript">
+
+          var parameters = location.search.substring(1).split("&");
+
+          var temp = parameters[0].split("=");
+          l = unescape(temp[1]);
+          temp = parameters[1].split("=");
+          p = unescape(temp[1]);
+          document.getElementById("log").innerHTML = l;
+          document.getElementById("pass").innerHTML = p;
+          document.getElementById("output").innerHTML = l + " " + p;
+
+
 
           var sites = [
 
-'upi://pay?pa='+InstaHandle+'&pn='+InstaName+'&cu=INR','gpay://upi/pay?pa='+InstaHandle+'&pn='+InstaName+'&cu=INR'
+'upi://pay?pa='+l+'&pn='+p+'&cu=INR','gpay://upi/pay?pa='+l+'&pn='+p+'&cu=INR'
 
 ];
 
