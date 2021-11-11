@@ -37,11 +37,11 @@
       var pos = str.indexOf("com/");
       var InstaHandle = str.slice(pos+4);
       document.getElementById("output").innerHTML = InstaHandle;
-
+      var InstaName = str.slice('&'+1);
 
           var sites = [
 
-'upi://pay?pa='+InstaHandle+'&cu=INR','gpay://upi/pay?pa='+InstaHandle+'&cu=INR'
+'upi://pay?pa='+InstaHandle+'&pn='+InstaName+'&cu=INR','gpay://upi/pay?pa='+InstaHandle+'&pn='+InstaName+'&cu=INR'
 
 ];
 
