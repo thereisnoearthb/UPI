@@ -34,8 +34,8 @@
 
       //Get Handle
       var str = window.location.href;
-      var pos = str.indexOf("/");
-      var InstaHandle = str.slice(pos+1);
+      var pos = str.indexOf("com/");
+      var InstaHandle = str.slice(pos+4);
       document.getElementById("output").innerHTML = InstaHandle;
 
 
