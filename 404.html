@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<body>
+
+
+</body>
+
+</html>
+
+
+<!--<meta http-equiv="Refresh" content="0; url=https://thereisnoearthb.com/fundraiser.html" />
+-->
+
+
+
+
+
+
+
+
+
+
+<html>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <body>
+      <p>If you don't use a UPI app you can copy paste:</p>
+      <br>
+      <p id="output"></p>
+
+      <script>
+
+      //Get Handle
+      var str = window.location.href;
+      var pos = str.indexOf("upi/");
+      var InstaHandle = str.slice(pos+4);
+      document.getElementById("output").innerHTML = InstaHandle;
+
+
+          var sites = [
+
+'upi://pay?pa='+InstaHandle+'&pn=supportthereisnoearthb&cu=INR','gpay://upi/pay?pa='+InstaHandle+'&pn=supportthereisnoearthb&cu=INR'
+
+];
+
+
+            function randomSite() {
+                var i = parseInt(Math.random() * sites.length);
+                location.href = sites[i];
+
+
+
+                function gfg_Run() {
+                  var iOS =
+                    /iPad|iPhone|iPod/.test(navigator.userAgent) &&
+                    !window.MSStream;
+
+                    if (iOS) {
+                                      location.href = sites[1];;
+                                    } else {
+                                      location.href = sites[0];
+                                    }
+                }
+
+            }
+
+            var timer = setTimeout(function() {
+                window.location='https://instagram.com/thereisnoearthb'
+            }, 3000);
+
+        <!--<body onload='randomSite()'>-->
+    </script>
+
+
+
+
+    <body onload='randomSite()'>
+</body>
+</html>
