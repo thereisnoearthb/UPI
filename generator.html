@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="https://thereisnoearthb.com/css/materialize.css"  media="screen,projection"/>
+
+</head>
+
+
+<body class="container" >
+  <center>
+<h2>UPI Magic link Generator</h2>
+</center>
+
+
+
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col offset-s4 s4">
+
+          <textarea id="UPI ID" class="materialize-textarea" type="text" class="validate">givetomlp.thereisnoearthb1@icici</textarea>             <label for="UPI ID">UPI ID</label>           </div>
+<br><br><br>
+          <div class="input-field col offset-s4 s4">
+            <textarea id="name" class="materialize-textarea" type="text" class="validate">supportthereisnoearthb</textarea>             <label for="name">Name</label>           </div>
+
+  <br><br><br><br><br><br>
+              <center>
+
+                                              <button  id="navigate_next" onclick="generateLink(); return false; " class="btn waves-effect waves-light btn-large" type="submit" name="action">Get Link
+                                                <i class="material-icons right">navigate_next</i>
+                                              </button>
+
+
+
+              </center>
+      </div>
+    </form>
+  </div>
+
+    <a class="blue-text flow-text" href="https://thereisnoearthb.org/upi.html" id = "outputlink"><p id="output">Best used with the merchant UPI account such as the one provided with a milaap/ impactguru/ other fundraiser.<br><br> Tested to work for merchant accounts on Google Pay, BHIM, SBI and HDFC apps.<br> <br>Test it by sending one rupee, it should instantly show up on the fundraising dashboard.<br><br> NOTE: we do not get any 'cut', this is as direct as it gets.</p>
+    </a>
+
+    <div class="">
+    <div class="card-panel yellow z-depth-1">
+    <div class="row valign-wrapper">
+    <div class="col s4">
+    <img src="https://thereisnoearthb.com/TINEB_LOGO.jpeg" alt="" class="large circle responsive-img">
+    </div>
+    <div class="col s10">
+    <span>
+    <a class="blue-text flow-text" href="https://thereisnoearthb.com/">This open-source website has been created by There Is No Earth B for inclusive, organic and decentralized climate action and advocacy<a></span>
+    </div>
+
+  <script>
+
+  function generateLink() {
+
+var UPI_ID = document.getElementById("UPI ID").value;
+var Name = document.getElementById("name").value;
+
+const p1 = "https://upi.thereisnoearthb.com/?upi=";
+
+const p2 = "&name=";
+
+
+var FinalLink = p1 + UPI_ID + p2 + Name ;
+document.getElementById("output").innerHTML = FinalLink;
+document.getElementById("outputlink").href = FinalLink;
+}
+
+</script>
+<script src="https://thereisnoearthb.com/js/materialize.js"></script>
+
+</html>

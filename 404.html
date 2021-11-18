@@ -17,12 +17,18 @@ window.$_GET = location.search.substr(1).split("&").reduce((o,i)=>(u=decodeURICo
 document.getElementById("output").innerHTML = $_GET.upi + " " + $_GET.name;
 
 
+                if (typeof $_GET.upi == 'undefined' ) {
+                                window.location='generator.html'
+                                } else {
+
 
       var sites = [
 
 'upi://pay?pa='+$_GET.upi+'&pn='+$_GET.name+'&cu=INR','gpay://upi/pay?pa='+$_GET.upi+'&pn='+$_GET.name+'&cu=INR'
 
 ];
+                  }
+
 
 
 
@@ -39,7 +45,7 @@ document.getElementById("output").innerHTML = $_GET.upi + " " + $_GET.name;
                                 }
             }
 
-        
+
 
         var timer = setTimeout(function() {
             window.location='https://instagram.com/thereisnoearthb'
