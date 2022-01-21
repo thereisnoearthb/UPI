@@ -9,7 +9,8 @@ const pay = () => {
               "&am=" +
               document.getElementById('amt').value +
               "&tr=" +
-              txnId;// +
+              txnId +
+              ""&tn=";
               //"&mc=5411&cu=INR&tn=ORDER ID " +
               //orderId;
 
