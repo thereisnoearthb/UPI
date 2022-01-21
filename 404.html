@@ -25,7 +25,7 @@ document.getElementById("output").innerHTML = $_GET.upi + " " + $_GET.name;
 
       var sites = [
 
-'upi://pay?pa='+$_GET.upi+'&pn='+$_GET.name+'&cu=INR','gpay://upi/pay?pa='+$_GET.upi+'&pn='+$_GET.name+'&cu=INR'
+'upi://pay?pa=${$_GET.upi}&pn=${$_GET.name}&mc=0000&mode=02&purpose=00&orgid=${orgId}','gpay://upi/pay?pa='+$_GET.upi+'&pn='+$_GET.name+'&cu=INR'
 
 ];
                   }
