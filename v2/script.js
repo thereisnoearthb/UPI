@@ -9,9 +9,9 @@ const pay = () => {
               "&am=" +
               document.getElementById('amt').value +
               "&tr=" +
-              txnId +
-              "&mc=5411&cu=INR&tn=ORDER ID " +
-              orderId;
+              txnId;// +
+              //"&mc=5411&cu=INR&tn=ORDER ID " +
+              //orderId;
 
               let p = encodeURI(c);
 
