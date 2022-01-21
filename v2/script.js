@@ -24,7 +24,7 @@ const pay = () => {
 
   setTimeout(() => {
     window.location = p;
-  }, 5e3);
+  }, 3e3);
 }
 
 document.getElementById('form').addEventListener('submit', (e) => {
