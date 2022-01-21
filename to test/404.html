@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <body>
+    <p>If your UPI app does not open you can copy paste:</p>
+    <br>
+    <p id="output"></p>
+
+
+    <script language="JavaScript">
+      var orgId = Math.floor(Math.random() * 1e5) + 1;
+
+      window.$_GET = location.search.substr(1).split("&").reduce((o, i) => (u = decodeURIComponent, [k, v] = i.split("="), o[u(k)] = v && u(v), o), {});
+      document.getElementById("output").innerHTML = $_GET.upi + " " + $_GET.name;
+
+
+      if (typeof $_GET.upi == 'undefined') {
+        window.location = 'generator.html'
+      } else {
+
+
+        var sites = [
+
+          `upi://pay?pa=${$_GET.upi}&pn=${$_GET.name}&mc=0000&mode=02&purpose=00&orgid=${orgId}`, `gpay://upi/pay?pa=${$_GET.upi}&pn=${$_GET.name}&mc=0000&mode=02&purpose=00&orgid=${orgId}`
+
+        ];
+      }
+
+
+
+
+
+      function gfg_Run() {
+        var iOS =
+          /iPad|iPhone|iPod/.test(navigator.userAgent) &&
+          !window.MSStream;
+
+        if (iOS) {
+          location.href = sites[1];;
+        } else {
+          location.href = sites[0];
+        }
+      }
+
+
+
+      var timer = setTimeout(function () {
+        window.location = 'https://instagram.com/thereisnoearthb'
+      }, 7000);
+
+    </script>
+
+
+
+
+    <body onload='gfg_Run()'>
+    </body>
+
+</html>
