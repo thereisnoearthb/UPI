@@ -46,7 +46,6 @@ const share = (e) => {
 
 const setLink = (link) => {
   l = link;
-  navigator.share = true;
   setSharingLinks();
   console.log(link);
 };
