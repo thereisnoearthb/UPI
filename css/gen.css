@@ -1,0 +1,193 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  margin-bottom: 2em;
+}
+
+h2 {
+  color: #06244e;
+}
+
+h3 {
+  font-size: large;
+  margin: 1em 0;
+  color: #06244e;
+}
+
+.form {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+input {
+  width: 100%;
+  margin: 0.5em;
+  border: none;
+  text-align: center;
+}
+
+input[type="text"] {
+  border-bottom: 2px solid #06244e;
+}
+
+input[type="submit"],
+input[type="button"] {
+  padding: 0.5em;
+  border: 2px solid #06244e;
+  background-color: transparent;
+  color: #06244e;
+  font-size: large !important;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 50ms;
+  font-size: 1em;
+}
+
+input[type="submit"] {
+  margin: 1em;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="button"]:hover,
+input[type="button"]:focus {
+  background-color: #06244e;
+  color: white;
+}
+
+#copy,
+#share {
+  display: none;
+}
+
+.share-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1.75em;
+  margin-bottom: 1.75em;
+  display: none;
+}
+
+.share-buttons a,
+h3 a {
+  color: #06244e;
+}
+
+footer {
+  background-color: #e1d3b6;
+  margin: 0;
+  position: relative;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 60%;
+}
+
+.p-1,
+.p-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.p-1 {
+  grid-column: 1;
+}
+
+.p-2 {
+  grid-column: 2;
+}
+
+.p-2 {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.p-2 a {
+  color: #234a8d;
+}
+
+img.tineb-logo {
+  border-radius: 50%;
+  max-height: 10em;
+  padding: 1em;
+}
+
+section {
+  text-align: justify;
+  margin: auto 2em;
+  font-size: medium;
+}
+
+h2 {
+  margin: 0;
+  font-size: larger;
+}
+
+@media (max-width: 900px) {
+  header {
+    margin: 0 1em;
+  }
+
+  main {
+    padding: 2em 0;
+    margin-top: -1em;
+  }
+
+  .form {
+    width: 70%;
+  }
+
+  footer .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .p-1 {
+    padding-top: 1em;
+    margin-bottom: -1em;
+  }
+
+  .p-2 {
+    margin-top: -1em;
+    padding-bottom: 0.5em;
+  }
+
+  .p-1,
+  .p-2 {
+    grid-column: 1;
+  }
+
+  img.tineb-logo {
+    padding: 0;
+  }
+
+  section {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
