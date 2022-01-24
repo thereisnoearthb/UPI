@@ -1,91 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
-<head>
-  <meta name="robots" content="noindex">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-  <meta content="utf-8" http-equiv="encoding">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="https://thereisnoearthb.com/css/materialize.css"  media="screen,projection"/>
 
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta property="og:title" content="UPI Magic Link Generator" />
-<meta property="og:description" content="One stop for direct fundraising without any commissions or tips :)" />
-<meta property="og:image" content="http://upi.thereisnoearthb.com/Social%20Preview%20of%20Links.jpg" />
-<meta property="og:image:secure_url" content="https://upi.thereisnoearthb.com/Social%20Preview%20of%20Links.jpg" />
-<meta property="og:image:type" content="image/jpeg" />
-<meta name="twitter:card" content="summary_large_image" />
+    <title>UPI Magic Link Generator | There Is No Earth B</title>
 
+    <meta name="robots" content="noindex">
 
-<link rel="icon" href="https://thereisnoearthb.com/TINEB_LOGO.jpeg" type="image/x-icon" />
+    <meta property="og:title" content="UPI Magic Link Generator" />
+    <meta property="og:description" content="One stop for direct fundraising without any commissions or tips :)" />
+    <meta property="og:image" content="http://upi.thereisnoearthb.com/demo.png" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:secure_url" content="https://upi.thereisnoearthb.com/demo.png" />
 
-</head>
+    <meta name="twitter:card" content="summary_large_image" />
 
+    <link rel="icon" href="https://thereisnoearthb.com/TINEB_LOGO.jpeg" type="image/x-icon" />
 
-<body class="container" >
-  <center>
-<h2>UPI Magic link Generator</h2>
-</center>
+    <link rel="stylesheet" href="https://thereisnoearthb.com/style.css">
+    <link rel="stylesheet" href="https://thereisnoearthb.com/styled.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
+      integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/gen.css">
+  </head>
 
-<div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col offset-s4 s4">
+  <body>
+    <header>
+      <h1 id="top">UPI Magic Link Generator</h1>
+    </header>
+    <main class="gen-container">
+      <form class="form">
+        <input type="text" name="upi" placeholder="UPI ID (example@sbi)" required />
+        <input type="text" name="name" placeholder="Display Name" required />
+        <input type="submit" value="Generate Link" />
 
-          <textarea id="UPI ID" class="materialize-textarea" type="text" class="validate">givetomlp.thereisnoearthb1@icici</textarea>             <label for="UPI ID">UPI ID</label>           </div>
-<br><br><br>
-          <div class="input-field col offset-s4 s4">
-            <textarea id="name" class="materialize-textarea" type="text" class="validate">supportthereisnoearthb</textarea>             <label for="name">Name</label>           </div>
-
-  <br><br><br><br><br><br>
-              <center>
-
-                                              <button  id="navigate_next" onclick="generateLink(); return false; " class="btn waves-effect waves-light btn-large" type="submit" name="action">Get Link
-                                                <i class="material-icons right">navigate_next</i>
-                                              </button>
-
-
-
-              </center>
+        <input type="button" value="Copy Link" id="copy" />
+        <input type="button" value="Share" id="share" />
+        <div class="share-buttons">
+          <a class="wa" href="" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-2x fa-whatsapp"></i>
+          </a>
+          <a class="fb" href="" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-2x fa-facebook"></i>
+          </a>
+          <a class="tw" href="" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-2x fa-twitter"></i>
+          </a>
+          <a class="li" href="" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-2x fa-linkedin"></i>
+          </a>
+        </div>
+      </form>
+      <section>
+        <strong>
+          <h2>Raising funds for something?<br />UPI Magic Links could be useful for your campaign!</h2>
+        </strong>
+        <br />
+        Registering on popular fundraising platforms is one way to get shareable links, and payment gateways also exist,
+        but the catch is that they take a cut that can range from 2% to 15%. Transferring funds directly to the
+        beneficiaries to their bank accounts through UPI is one way to get around this. Sharing the UPI ID and QR code
+        is fine, but the obvious step even in that is that the willing donors have to take up the initiative to open
+        their UPI apps and key in the ID or scan the QR code.
+        <br /><br />
+        What if you could share them a link directly which would prompt them to open their app with all the details
+        keyed in? This reduces the friction a bit. You can share these links on socials too. If visiting from a browser
+        that doesn't support opening the app, you'll still get the UPI ID and QR code that people can scan.
+        <center>
+          <h3><a href="#top">Generate a magic link now!</a></h3>
+        </center>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="p-1">
+          <img class="tineb-logo" src="https://thereisnoearthb.com/TINEB_LOGO.jpeg" alt="There Is No Earth B Logo" />
+        </div>
+        <div class="p-2">
+          <p>
+            This open-source website has been created at
+            <a href="https://instagram.com/thereisnoearthb" target="_blank"
+              rel="noopener noreferrer">@thereisnoearthb</a>
+            for inclusive, organic and decentralized climate action and advocacy by
+            <a href="https://twitter.com/ScientificGhosh" target="_blank" rel="noopener noreferrer">Sudipto Ghosh</a> :)
+          </p>
+        </div>
       </div>
-    </form>
-  </div>
+    </footer>
 
-    <a class="blue-text flow-text" href="https://thereisnoearthb.org/upi.html" id = "outputlink"><p id="output">Best used with the merchant UPI account such as the one provided with a milaap/ impactguru/ other fundraiser.<br><br> Tested to work for merchant accounts on Google Pay, BHIM, SBI and HDFC apps.<br> <br>Test it by sending one rupee, it should instantly show up on the fundraising dashboard.<br><br> NOTE: we do not get any 'cut', this is as direct as it gets.</p>
-    </a>
-
-    <div class="">
-    <div class="card-panel yellow z-depth-1">
-    <div class="row valign-wrapper">
-    <div class="col s4">
-    <img src="https://thereisnoearthb.com/TINEB_LOGO.jpeg" alt="" class="large circle responsive-img">
-    </div>
-    <div class="col s10">
-    <span>
-    <a class="blue-text flow-text" href="https://thereisnoearthb.com/">This open-source website has been created by There Is No Earth B for inclusive, organic and decentralized climate action and advocacy<a></span>
-    </div>
-
-  <script>
-
-  function generateLink() {
-
-var UPI_ID = document.getElementById("UPI ID").value;
-var Name = document.getElementById("name").value;
-
-const p1 = "https://upi.thereisnoearthb.com/?upi=";
-
-const p2 = "&name=";
-
-
-var FinalLink = p1 + UPI_ID + p2 + Name ;
-document.getElementById("output").innerHTML = FinalLink;
-document.getElementById("outputlink").href = FinalLink;
-}
-
-</script>
-<script src="https://thereisnoearthb.com/js/materialize.js"></script>
+    <script src="/js/gen.js"></script>
+  </body>
 
 </html>

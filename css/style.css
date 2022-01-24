@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap");
+
+* {
+  text-align: center;
+}
+
+main {
+  width: 60%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Playfair Display Black", "Times New Roman", Times, serif;
+  font-weight: bolder;
+  margin-bottom: 1em;
+}
+
+.qr-container {
+  padding: 1em;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+p.note {
+  width: 60%;
+  margin: 0 auto;
+  font-size: small;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  margin: 1em auto;
+  width: 100%;
+}
+
+footer p {
+  font-size: small;
+}
+
+footer p a,
+.redirect-generate a {
+  color: #0047ab;
+}
+
+.redirect-generate {
+  margin-top: 1em;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  main {
+    width: 90%;
+  }
+}
