@@ -87,6 +87,10 @@ input[type="button"]:focus {
   display: none;
 }
 
+#share {
+  margin-bottom: 1.75em;
+}
+
 .share-buttons a,
 h3 a {
   color: #06244e;

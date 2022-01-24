@@ -1,5 +1,7 @@
 var l;
 
+const DEBUG = window.location.host.includes('127.0.0.1') || window.location.host.includes('localhost');
+
 const setCopied = (t) => document.getElementById('copy').value = t;
 
 const copyToClipboard = (e) => {
@@ -29,13 +31,13 @@ const share = (e) => {
         url: l,
       })
       .then((e) => {
-        setShared('shared!');
+        setShared('Shared!');
         setTimeout(() => {
           setShared('');
         }, 5e3);
       })
       .catch((e) => {
-        setShared('could not share :(');
+        setShared('Could Not Share :(');
         setTimeout(() => {
           setShared('');
         }, 5e3);
@@ -44,6 +46,7 @@ const share = (e) => {
 
 const setLink = (link) => {
   l = link;
+  navigator.share = true;
   setSharingLinks();
   console.log(link);
 };
@@ -52,8 +55,8 @@ const handleSubmit = (e) => {
   e.preventDefault();
   const v = document.querySelector('input[name=\'upi\']').value;
   const na = document.querySelector('input[name=\'name\']').value;
-  const li = location.href.replace('generator.html', '').split('?')[0] + `?upi=${v}&name=${encodeURI(na)}`;
-  fetch(`https://is.gd/create.php?format=json&url=${encodeURIComponent(li.replace('localhost:5500', 'upi.thereisnoearthb.com'))}`)
+  const li = `https://upi.thereinoearthb.com/?upi=${v}&name=${encodeURI(na)}`;
+  fetch(`https://is.gd/create.php?format=json&url=${encodeURIComponent(li)}`)
     .then((d) => d.json())
     .then((_d) => setLink(_d.shorturl))
     .catch((e) => setLink(li));

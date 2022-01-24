@@ -19,6 +19,10 @@ h1 {
   padding: 1em;
 }
 
+#qr img {
+  margin: auto;
+}
+
 p {
   font-size: 1.5rem;
 }
