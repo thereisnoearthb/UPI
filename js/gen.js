@@ -55,7 +55,7 @@ const handleSubmit = (e) => {
   e.preventDefault();
   const v = document.querySelector('input[name=\'upi\']').value;
   const na = document.querySelector('input[name=\'name\']').value;
-  const li = `https://upi.thereinoearthb.com/?upi=${v}&name=${encodeURI(na)}`;
+  const li = `https://upi.thereisnoearthb.com/?upi=${v}&name=${encodeURI(na)}`;
   fetch(`https://is.gd/create.php?format=json&url=${encodeURIComponent(li)}`)
     .then((d) => d.json())
     .then((_d) => setLink(_d.shorturl))
