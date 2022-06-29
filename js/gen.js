@@ -54,6 +54,16 @@ const handleSubmit = (e) => {
   e.preventDefault();
   const v = document.querySelector('input[name=\'upi\']').value;
   const na = document.querySelector('input[name=\'name\']').value;
+
+  const nameInLowercase = na.toLowerCase();
+  if (nameInLowercase.match(/(there)[^a-zA-Z0-9]*(is)[^a-zA-Z0-9]*(no)[^a-zA-Z0-9]*(earth)[^a-zA-Z0-9]*(b)/g)
+    || nameInLowercase.match(/(there)[^a-zA-Z0-9]*(is)[^a-zA-Z0-9]*(no)[^a-zA-Z0-9]*(planet)[^a-zA-Z0-9]*(b)/g)
+    || nameInLowercase.match(/(t)[^a-zA-Z0-9]*(i)[^a-zA-Z0-9]*(n)[^a-zA-Z0-9]*(e)[^a-zA-Z0-9]*(b)/g)
+    || nameInLowercase.includes('there') && nameInLowercase.includes('is') && nameInLowercase.includes('no') && nameInLowercase.includes('earth') && nameInLowercase.includes('b')) {
+    alert('Please do not use the words There Is No Earth B or TINEB in your fundraiser name!');
+    return;
+  }
+
   const li = `https://upi.thereisnoearthb.com/?upi=${v}&name=${encodeURI(na)}`;
   fetch(`https://is.gd/create.php?format=json&url=${encodeURIComponent(li)}`)
     .then((d) => d.json())
