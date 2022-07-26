@@ -65,10 +65,11 @@ const handleSubmit = (e) => {
   }
 
   const li = `https://upi.thereisnoearthb.com/?upi=${v}&name=${encodeURI(na)}`;
-  fetch(`https://is.gd/create.php?format=json&url=${encodeURIComponent(li)}`)
-    .then((d) => d.json())
-    .then((_d) => setLink(_d.shorturl))
-    .catch((e) => setLink(li));
+//   fetch(`https://is.gd/create.php?format=json&url=${encodeURIComponent(li)}`)
+//     .then((d) => d.json())
+//     .then((_d) => setLink(_d.shorturl))
+//     .catch((e) => setLink(li));
+  setLink(li);
 };
 
 const setSharingLinks = () => {
