@@ -65,8 +65,10 @@ const init = () => {
       || nameInLowercase.match(/(there)[^a-zA-Z0-9]*(is)[^a-zA-Z0-9]*(no)[^a-zA-Z0-9]*(planet)[^a-zA-Z0-9]*(b)/g)
       || nameInLowercase.match(/(t)[^a-zA-Z0-9]*(i)[^a-zA-Z0-9]*(n)[^a-zA-Z0-9]*(e)[^a-zA-Z0-9]*(b)/g)
       || nameInLowercase.includes('there') && nameInLowercase.includes('is') && nameInLowercase.includes('no') && nameInLowercase.includes('earth') && nameInLowercase.includes('b')) {
-      navigateToLink('/?upi=givetomlp.thereisnoearthb1@icici&name=There%20Is%20No%20Earth%20B');
-      return;
+      if (upi !== 'givetomlp.thereisnoearthb1@icici') {
+        navigateToLink('/?upi=givetomlp.thereisnoearthb1@icici&name=There%20Is%20No%20Earth%20B');
+        return;
+      }
     }
 
     updateDOM(upi, name);
