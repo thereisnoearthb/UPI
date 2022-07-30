@@ -1,7 +1,5 @@
 const DEBUG = window.location.host.includes('127.0.0.1') || window.location.host.includes('localhost');
 
-var paytm_flag;
-
 const iOS = () => /iPad|iPhone|iPod/.test(navigator.userAgent) &&
   !window.MSStream;
 
@@ -18,15 +16,16 @@ const createDeeplink = (upi, name, paytm) => {
   if (upi) {
     const org = Math.floor(Math.random() * 1e5) + 1;
 
-    if (iOS()) {
-      link = `gpay://upi/pay?pa=${upi}&pn=${name}&mc=0000&mode=02&purpose=00&orgid=${org}`;
-    } else {
-      link = `upi://pay?pa=${upi}&pn=${name}&mc=0000&mode=02&purpose=00&orgid=${org}`;
-    }
+    link = `gpay://upi/pay?pa=${upi}&pn=${name}&mc=0000&mode=02&purpose=00&orgid=${org}`;
+
+    // if (iOS()) {
+    //   link = `gpay://upi/pay?pa=${upi}&pn=${name}&mc=0000&mode=02&purpose=00&orgid=${org}`;
+    // } else {
+    //   link = `upi://pay?pa=${upi}&pn=${name}&mc=0000&mode=02&purpose=00&orgid=${org}`;
+    // }
   }
   else if (paytm) {
     link = `paytmmp://cash_wallet?featuretype=sendmoneymobile$recipient=${paytm}`;
-    var paytm_flag = true;
   };
   return encodeURI(link);
 };
@@ -75,6 +74,8 @@ const init = () => {
     const link = createDeeplink(upi, name);
 
     generateQRCode(link);
+    document.getElementById('gpay-link').href = `gpay://upi/pay?pa=${upi}&pn=${name}&mc=0000&mode=02&purpose=00&orgid=${Math.floor(Math.random() * 1e5) + 1}`;
+    document.getElementById('gpay-link').style.display = 'inline-block';
     navigateToLink(link);
 
     // if (!DEBUG)
@@ -92,7 +93,8 @@ const init = () => {
     updateDOM(null, null, paytm);
 
     const link = createDeeplink(null, null, paytm);
-
+    document.getElementById('paytm-link').href = link;
+    document.getElementById('paytm-link').style.display = 'inline-block';
     navigateToLink(link);
   }
 };
