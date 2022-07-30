@@ -72,8 +72,8 @@ input[type="button"]:focus {
   color: white;
 }
 
-#copy,
-#share {
+#copy, #copy-paytm,
+#share, #share-paytm {
   display: none;
 }
 
@@ -87,7 +87,7 @@ input[type="button"]:focus {
   display: none;
 }
 
-#share {
+#share, #share-paytm {
   margin-bottom: 1.75em;
 }
 
